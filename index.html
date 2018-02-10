@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <style>
-  #styledText{
-      font-size: 24px;
+	#styledText{
+    	font-size: 24px;
+        color: red;
     }
 </style>
 <body>
@@ -10,6 +11,30 @@
 <h1>My First Heading</h1>
 
 <p id="styledText">My first paragraph.</p>
+<p id="text">This text will change style</p><br>
+<button type="button" onclick="javascripot:changeStyle();">Click me</button>
+
+<script>
+status = 1;
+function changeStyle() {
+//Note the lowercase first letter.
+x = document.getElementById("text");
+
+if(status==1) {
+    x.style.color = 'blue';
+    status = 2;
+}
+else if(status==2) {
+    x.style.color = 'red';
+    status = 3;
+}
+else if(status==3) {
+    x.style.color = 'yellow';
+    status = 1;
+}
+
+}
+</script>
 
 </body>
 </html>
